@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <welcome-file-list>
+        <!--第九章：jdbc技术-->
+        <welcome-file>jdbc/login.jsp</welcome-file>
+
+        <!--第八章：过滤器和监听器 filter-->
+        <welcome-file>filter/form.jsp</welcome-file>
+        <welcome-file>filter/index.jsp</welcome-file>
+        <welcome-file>MyFilterServlet</welcome-file>
+        <welcome-file>ForwardServlet</welcome-file>
+        <welcome-file>MyFilterServlet</welcome-file>
+
+        <!--第七章：EI表达式和JSTP javabean，EI-->
+        <welcome-file>el/c_url.jsp</welcome-file>
+        <welcome-file>el/c_foreach3.jsp</welcome-file>
+        <welcome-file>el/c_foreach2.jsp</welcome-file>
+        <welcome-file>el/c_foreach1.jsp</welcome-file>
+        <welcome-file>el/c_choose.jsp</welcome-file>
+        <welcome-file>el/c_if.jsp</welcome-file>
+        <welcome-file>el/c_out2.jsp</welcome-file>
+        <welcome-file>el/c_out1.jsp</welcome-file>
+        <welcome-file>el/test.jsp</welcome-file>
+        <welcome-file>el/cookie.jsp</welcome-file>
+        <welcome-file>el/param.jsp</welcome-file>
+        <welcome-file>el/scopes.jsp</welcome-file>
+        <welcome-file>el/pageContext.jsp</welcome-file>
+        <welcome-file>MyEIServlet</welcome-file>
+
+        <!--第六章：jsp技术-->
+        <welcome-file>client/index.jsp</welcome-file>
+        <welcome-file>jsp/jspForward.jsp</welcome-file>
+        <welcome-file>jsp/include.jsp</welcome-file>
+        <welcome-file>jsp/exception.jsp</welcome-file>
+        <welcome-file>jsp/pageContext.jsp</welcome-file>
+        <welcome-file>jsp/out.jsp</welcome-file>
+        <welcome-file>jsp/include.jsp</welcome-file>
+        <welcome-file>jsp/example02.jsp</welcome-file>
+        <welcome-file>jsp/example01.jsp</welcome-file>
+        <welcome-file>jsp/helloWorld.jsp</welcome-file>
+
+        <!--第五章：会话及会话技术 cookie，-->
+        <welcome-file>session_example02/login.html</welcome-file>
+        <welcome-file>ListBookServlet</welcome-file>
+        <welcome-file>LastAccessServlet</welcome-file><!--cookie有问题 -->
+
+        <!--第四章：请求和相应 request，response-->
+        <welcome-file>RequestIncludingServlet</welcome-file>
+        <welcome-file>RequestFowardServlet</welcome-file>
+        <welcome-file>request/form.html</welcome-file>
+        <welcome-file>request/download.html</welcome-file>
+        <welcome-file>RequestHeaderServlet</welcome-file>
+        <welcome-file>RequestLineServlet</welcome-file>
+        <welcome-file>response/login.html</welcome-file>
+        <welcome-file>RefreshServlet</welcome-file>
+        <welcome-file>ChineseServlet</welcome-file>
+        <welcome-file>PrintServlet</welcome-file>
+
+        <!--第三章：Servlet基础-->
+        <welcome-file>TestServlet06</welcome-file>
+        <welcome-file>TestServlet04</welcome-file>
+        <welcome-file>TestServlet03</welcome-file>
+        <welcome-file>TestServlet02</welcome-file>
+        <welcome-file>TestServlet01</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <context-param>
+        <param-name>AAA</param-name>
+        <param-value>aaa</param-value>
+    </context-param>
+    <context-param>
+        <param-name>BBB</param-name>
+        <param-value>bbb</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>HelloWorldServlet</servlet-name>
+        <servlet-class>cn.edu.lzit.firstapp.servlet.HelloWorldServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloWorldServlet</servlet-name>
+        <url-pattern>/HelloWorldServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>LifeServlet</servlet-name>
+        <servlet-class>cn.edu.lzit.firstapp.servlet.LifeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LifeServlet</servlet-name>
+        <url-pattern>/LifeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>MyHttpServlet</servlet-name>
+        <servlet-class>cn.edu.lzit.firstapp.servlet.MyHttpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyHttpServlet</servlet-name>
+        <url-pattern>/MyHttpServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <display-name>TestServlet02</display-name>
+        <servlet-name>TestServlet02</servlet-name>
+        <servlet-class>cn.edu.lzit.servlet.TestServlet02</servlet-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>wbb</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestServlet02</servlet-name>
+        <url-pattern>/TestServlet02</url-pattern>
+    </servlet-mapping>
+
+</web-app>
